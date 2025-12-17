@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Class Schedule - Pride MMA &amp; Fitness Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#181111",
+                        "surface-dark": "#221011",
+                        "border-dark": "#392829"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-zinc-200 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4 text-zinc-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-zinc-900 dark:text-white">Pride MMA &amp; Fitness Club</h2>
+</div>
+<div class="flex flex-1 items-center justify-end gap-4 md:gap-8">
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium leading-normal text-zinc-600 hover:text-primary dark:text-zinc-300 dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-zinc-600 hover:text-primary dark:text-zinc-300 dark:hover:text-primary" href="#">About Us</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Schedule</a>
+<a class="text-sm font-medium leading-normal text-zinc-600 hover:text-primary dark:text-zinc-300 dark:hover:text-primary" href="#">Pricing</a>
+<a class="text-sm font-medium leading-normal text-zinc-600 hover:text-primary dark:text-zinc-300 dark:hover:text-primary" href="#">Contact</a>
+</nav>
+<button class="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white transition-colors hover:bg-primary/90">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</header>
+<main class="flex w-full flex-1 flex-col items-center px-4 py-8 sm:px-6 lg:px-8">
+<div class="w-full max-w-7xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4 p-4">
+<h1 class="min-w-72 text-4xl font-black leading-tight tracking-[-0.033em] text-zinc-900 dark:text-white">Class Schedule</h1>
+</div>
+<!-- Toolbar and Filters -->
+<div class="mb-6 flex flex-col gap-4 border-b border-zinc-200 pb-4 dark:border-border-dark md:flex-row md:items-center md:justify-between">
+<!-- ToolBar -->
+<div class="flex items-center gap-2 px-4 py-3">
+<button class="rounded-md p-2 text-zinc-600 hover:bg-zinc-200 dark:text-zinc-300 dark:hover:bg-surface-dark">
+<span class="material-symbols-outlined text-2xl">chevron_left</span>
+</button>
+<button class="rounded-md p-2 text-zinc-600 hover:bg-zinc-200 dark:text-zinc-300 dark:hover:bg-surface-dark">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</button>
+<button class="rounded-md p-2 text-zinc-600 hover:bg-zinc-200 dark:text-zinc-300 dark:hover:bg-surface-dark">
+<span class="material-symbols-outlined text-2xl">calendar_today</span>
+</button>
+</div>
+<!-- Chips -->
+<div class="flex flex-wrap gap-3 p-3">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 px-4 text-zinc-800 dark:bg-border-dark dark:text-white">
+<p class="text-sm font-medium leading-normal">All Classes</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 px-4 text-zinc-800 dark:bg-border-dark dark:text-white">
+<p class="text-sm font-medium leading-normal">MMA</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 px-4 text-primary dark:bg-primary/20 dark:text-white">
+<p class="text-sm font-medium leading-normal">BJJ</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 px-4 text-zinc-800 dark:bg-border-dark dark:text-white">
+<p class="text-sm font-medium leading-normal">Fitness</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-zinc-200 px-4 text-zinc-800 dark:bg-border-dark dark:text-white">
+<p class="text-sm font-medium leading-normal">Kids</p>
+</button>
+</div>
+</div>
+<!-- HeadlineText -->
+<h2 class="pb-3 pt-5 text-center text-[28px] font-bold leading-tight tracking-tight text-zinc-900 dark:text-white">October 23 - 29, 2023</h2>
+<!-- Weekly Schedule Grid -->
+<div class="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-zinc-200 bg-zinc-200 dark:border-border-dark dark:bg-border-dark md:grid-cols-7">
+<!-- Day Headers -->
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Monday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Tuesday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Wednesday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Thursday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Friday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Saturday</div>
+<div class="hidden bg-background-light p-4 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:bg-surface-dark dark:text-zinc-400 md:block">Sunday</div>
+<!-- Monday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Monday</div>
+<div class="rounded-lg border-l-4 border-blue-500 bg-blue-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-blue-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">BJJ Fundamentals</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Ana</p>
+</div>
+<div class="rounded-lg border-l-4 border-red-500 bg-red-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-red-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Muay Thai</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">5:00 - 6:00 PM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Mike</p>
+</div>
+</div>
+<!-- Tuesday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Tuesday</div>
+<div class="rounded-lg border-l-4 border-green-500 bg-green-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-green-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Strength &amp; Cond.</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Sara</p>
+</div>
+<div class="rounded-lg border-l-4 border-purple-500 bg-purple-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-purple-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Kids MMA</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">4:00 - 5:00 PM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Dave</p>
+</div>
+</div>
+<!-- Wednesday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Wednesday</div>
+<div class="rounded-lg border-l-4 border-blue-500 bg-blue-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-blue-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">BJJ Advanced</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Ana</p>
+</div>
+<div class="rounded-lg border-l-4 border-red-500 bg-red-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-red-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">MMA Sparring</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:30 PM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Mike</p>
+</div>
+</div>
+<!-- Thursday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Thursday</div>
+<div class="rounded-lg border-l-4 border-green-500 bg-green-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-green-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">HIIT Fitness</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Sara</p>
+</div>
+</div>
+<!-- Friday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Friday</div>
+<div class="rounded-lg border-l-4 border-blue-500 bg-blue-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-blue-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">No-Gi BJJ</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">6:00 - 7:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Ana</p>
+</div>
+<div class="rounded-lg border-l-4 border-red-500 bg-red-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-red-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Boxing Tech</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">5:00 - 6:00 PM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Mike</p>
+</div>
+</div>
+<!-- Saturday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Saturday</div>
+<div class="rounded-lg border-l-4 border-purple-500 bg-purple-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-purple-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Kids BJJ</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">9:00 - 10:00 AM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Coach Dave</p>
+</div>
+<div class="rounded-lg border-l-4 border-yellow-500 bg-yellow-500/10 p-3 shadow-sm transition-all hover:shadow-md dark:bg-yellow-500/20">
+<p class="font-semibold text-zinc-800 dark:text-white">Open Mat</p>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">10:00 AM - 12:00 PM</p>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">All Welcome</p>
+</div>
+</div>
+<!-- Sunday -->
+<div class="flex flex-col gap-4 bg-background-light p-2 dark:bg-surface-dark md:p-4">
+<div class="block p-2 text-center text-sm font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 md:hidden">Sunday</div>
+<div class="flex h-full items-center justify-center rounded-lg p-3">
+<p class="text-sm text-zinc-400 dark:text-zinc-500">Closed</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

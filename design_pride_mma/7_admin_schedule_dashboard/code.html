@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pride MMA - Admin Schedule</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-hover": "#0f4bc2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1E2532",
+                        "surface-light": "#FFFFFF",
+                        "border-dark": "#2D3648",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dark mode feeling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101622; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D3648; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4B5563; 
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white h-screen overflow-hidden flex font-display">
+<!-- Sidebar -->
+<aside class="w-72 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-border-dark flex flex-col h-full shrink-0 z-20 transition-all">
+<div class="p-6 pb-2">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 shadow-lg ring-2 ring-white/10" data-alt="Pride MMA Logo showing a stylized fist in blue flames" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3QoWqVOULuX0j3C68YkUQiLgecmOrbxeKuDI0ixKTRLMeKvJYS_2zg8KwiYofG1LRjSmuZEikJMtnKQwi1INM22YRO1_WSezB8STwNJYKMBY6lf_DAS1C8qT4KNB48Th8uokg2P6oAHDF7ERQunNaRUzejfiO5MP_jeqQDZYrhBilPLRUvzcNSTVYCijLUWQoj9oZFCb7FVOhZPsR9JPvR3qoIId4pCNGoWUsa_i_eP57pkNWLOHyYTReVMs0oGs2FprFk6BAkmg");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-none">Pride MMA</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Admin Console</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1.5">
+<!-- Active Item -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white shadow-md shadow-primary/20 group transition-all" href="#">
+<span class="material-symbols-outlined icon-fill text-[22px]">calendar_today</span>
+<span class="text-sm font-medium">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#2a3446] hover:text-slate-900 dark:hover:text-white transition-all group" href="#">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">group</span>
+<span class="text-sm font-medium">Members</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#2a3446] hover:text-slate-900 dark:hover:text-white transition-all group" href="#">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">person</span>
+<span class="text-sm font-medium">Instructors</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#2a3446] hover:text-slate-900 dark:hover:text-white transition-all group" href="#">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">bar_chart</span>
+<span class="text-sm font-medium">Reporting</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-[#2a3446] hover:text-slate-900 dark:hover:text-white transition-all group" href="#">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-border-dark">
+<div class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+<div class="size-9 rounded-full bg-gradient-to-tr from-primary to-purple-500 flex items-center justify-center text-white text-sm font-bold shadow-md">
+                    JD
+                </div>
+<div class="flex flex-col">
+<p class="text-sm font-medium dark:text-white text-slate-900">John Doe</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Head Administrator</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-slate-400 text-sm">expand_more</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Header -->
+<header class="flex-shrink-0 bg-white dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-10 border-b border-slate-200 dark:border-border-dark px-8 py-5 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h1 class="text-2xl font-bold dark:text-white text-slate-900 tracking-tight">Schedule Management</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400">Manage club classes, sessions, and instructor availability.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="h-10 px-4 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 shadow-sm cursor-pointer hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Oct 24, 2023</span>
+</div>
+<button class="h-10 px-5 rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-medium shadow-lg shadow-primary/20 flex items-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                    Add Class
+                </button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8">
+<div class="flex flex-col gap-8 max-w-[1400px] mx-auto">
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-500/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<span class="flex items-center gap-1 text-xs font-medium text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                                +2.5%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Classes Today</p>
+<p class="text-3xl font-bold dark:text-white text-slate-900 mt-1">12</p>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-purple-50 dark:bg-purple-500/10 rounded-lg text-purple-500">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+<span class="flex items-center gap-1 text-xs font-medium text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                                +12%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Bookings</p>
+<p class="text-3xl font-bold dark:text-white text-slate-900 mt-1">145</p>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-orange-50 dark:bg-orange-500/10 rounded-lg text-orange-500">
+<span class="material-symbols-outlined">sports_martial_arts</span>
+</div>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 bg-slate-100 dark:bg-slate-700/50 px-2 py-1 rounded-full">
+                                0%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Instructors</p>
+<p class="text-3xl font-bold dark:text-white text-slate-900 mt-1">8</p>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+<div class="flex flex-1 w-full lg:w-auto items-center gap-3">
+<!-- Search -->
+<div class="relative flex-1 max-w-md group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border-none rounded-lg leading-5 bg-white dark:bg-surface-dark dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Search classes, instructors..." type="text"/>
+</div>
+<!-- Filter Dropdown Mockup -->
+<div class="hidden sm:flex relative">
+<button class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-surface-dark border-none rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+                                Filter
+                                <span class="material-symbols-outlined text-[16px] text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+<!-- View Toggles -->
+<div class="flex p-1 bg-white dark:bg-surface-dark rounded-lg shadow-sm border border-slate-200 dark:border-border-dark self-end lg:self-auto">
+<button class="px-4 py-1.5 rounded text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">Day</button>
+<button class="px-4 py-1.5 rounded text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">Week</button>
+<button class="px-4 py-1.5 rounded shadow-sm bg-slate-100 dark:bg-primary text-slate-900 dark:text-white text-sm font-medium transition-colors">List</button>
+</div>
+</div>
+<!-- Schedule List -->
+<div class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-[#151b26] border-b border-slate-200 dark:border-border-dark">
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider w-32">Time</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Class</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Instructor</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Location</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Capacity</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-border-dark">
+<!-- Row 1 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-[#151b26] transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">09:00 AM</span>
+<span class="text-xs text-slate-500">60 min</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-purple-500"></div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">BJJ Fundamentals</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Gi Required</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of instructor Mike T." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmr21SGC4-IO6CXjEJEGHIIARNeimTaUsLrLb9kQX_Qhe-p_J5S0ZdF_kRzYAyTSIDM4sPQ7q2V-Qh90ly7bh-qiHOifxh2Ph6_OmdHwXqRH9lWYwQIsM25TchAbEx5slX8Mp5ozCBcMXe-3Q9O6faYchS0MpkJbFViwUwx0bE1SXFEUUqW8rD6ZnV_HPVegERSdnXPHP8w8j0X0jAZgcvg_iVLi9gU8Fc1e2ginP2ZBsJefFDxApIikF-bekHKmVOHN7_jmAiDc0');"></div>
+<span class="text-sm text-slate-700 dark:text-slate-300">Mike Thompson</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            Mat A
+                                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[60%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">12/20</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-[#151b26] transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">10:30 AM</span>
+<span class="text-xs text-slate-500">90 min</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-red-500"></div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Muay Thai Clinch</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Advanced</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of instructor Sarah J." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUrfXDYZ9MDxb_vSeaK-x_I1m31dFYXV_njPPrDjTODrZ7ERdFoKQG79zd9CjytmoTl9iy2vRzGRtIx0BFOJ6HJygmw_wVOumpPJ9sOteYM6kvXIjwPHz-n4wrYMn71T71I5GKH76pSfgHzYmDybkUZUID9SD81OeiV3R9GE8Km9qIyAh9j9UvSeA-JjK598DrxhoVKzx3CtCmY31kYUCO9pCAJTz1UtZQn9IWybO4fLoldn2CLP3mbeTYMDxphjcmk5sHaIXYZTA');"></div>
+<span class="text-sm text-slate-700 dark:text-slate-300">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            The Cage
+                                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-orange-500 w-[90%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">18/20</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-[#151b26] transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">05:00 PM</span>
+<span class="text-xs text-slate-500">45 min</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-emerald-500"></div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Kids MMA</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Ages 6-12</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of instructor Dave K." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWFJJK31v-s4CWWxUqxo2ykBVA_gUGs-7jxcQsEYfOGQlFtn8gWjGxNwRTIPsykMhoY-d-e4QIAUUNo7NIjYF9UaiR0QOKINghu9CcuzA9wTRj82IdMn1YwgpLqyByzL29Cmpm5SGMrthbq3M3-VsYp2MWUX976MM-k3HKSKBZaqYhzyDQ1-mZCj4ARlY3Lu8JwpXWQve09sk2NDUigZSSLGyCbkmaj9kY0m2KcHoVYL7S4uVuC4W_pgP2t5qORcGw1y_scF5m1p0');"></div>
+<span class="text-sm text-slate-700 dark:text-slate-300">Dave King</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            Mat B
+                                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 w-[40%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">6/15</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-[#151b26] transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">06:00 PM</span>
+<span class="text-xs text-slate-500">60 min</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-blue-500"></div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Boxing Tech</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">All Levels</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of instructor Sarah J." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxCVXyxV2x86MPXJByGnzlJaccf4c4dOzg9Jml8wdL-U7-jgC7C2FvJKnjMy8OjQzmfXpwPQpHPD5SzawM68W2dHK9bdHNKMjgd5IxQQO_v91Myqxb_Uo3UfQ6xo49tRBRoAhYH2SJb8fjbYhpb6S-gyAdoMZXoyGs-IcoDQ9Za5dWbfxTDQV4JfIGvDB7cCn7evB0k1RNXlBf5cx75_yhoeHBvkRp6gC05wm-dKWIXjBQnihJKeIDKQ8-KYjh8KBkYljmo5B3vLo');"></div>
+<span class="text-sm text-slate-700 dark:text-slate-300">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            Ring
+                                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[75%]"></div>
+</div>
+<span class="text-xs text-slate-500 font-medium">15/20</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-[#151b26] transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white">07:30 PM</span>
+<span class="text-xs text-slate-500">90 min</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-purple-500"></div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Advanced BJJ</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Blue Belt+</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="Portrait of instructor Mike T." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVuWqWW5FueqC4SRiuggtCu6I6wrAtd90EIG-pY2gzizAiWBqKpgMmhK6QlmXNWdDgSBc3y_7uRYfCKIkQgWccxhyESj5Fs8Vilo0iHyK4mDj7rQmHkNJzAH4fPNYt1ft9pI2xfOA-7Z-Ek-_CdX5wikT6s9KBZL14YDmmTZ8eBonyRft72HG0a87dBRNthLu6v32aU4XCh7VLCjKusre_-VgZ_QiJohTy0w-gt4q-V8BkKtBl3Q6Gkr5LRJoUAvzRF3jFvgBogZw');"></div>
+<span class="text-sm text-slate-700 dark:text-slate-300">Mike Thompson</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                                            Mat A
+                                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-red-500 w-[100%]"></div>
+</div>
+<span class="text-xs text-red-500 font-bold">Full</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 border-t border-slate-200 dark:border-border-dark flex items-center justify-between bg-slate-50 dark:bg-[#151b26]">
+<p class="text-xs text-slate-500 dark:text-slate-400">Showing <span class="font-medium text-slate-900 dark:text-white">1-5</span> of <span class="font-medium text-slate-900 dark:text-white">12</span> classes</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-medium rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark text-slate-400 cursor-not-allowed">Previous</button>
+<button class="px-3 py-1 text-xs font-medium rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark text-slate-600 dark:text-slate-300 hover:border-primary transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Membership Options - Pride MMA &amp; Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 20
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ec131e",
+              "background-light": "#f8f6f6",
+              "background-dark": "#181111", 
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 dark:border-b-[#392829] px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-5">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+</svg>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Pride MMA &amp; Fitness</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-gray-700 dark:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-gray-700 dark:text-white text-sm font-medium leading-normal" href="#">Classes</a>
+<a class="text-gray-700 dark:text-white text-sm font-medium leading-normal" href="#">Schedule</a>
+<a class="text-gray-700 dark:text-white text-sm font-medium leading-normal" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Join Now</span>
+</button>
+</div>
+</header>
+<!-- HeroSection -->
+<main class="flex flex-col gap-8 md:gap-12 py-8">
+<div class="@container">
+<div class="w-full">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 text-center" data-alt="A fighter training in a dark, atmospheric MMA gym, with a focus on intensity and determination." style='background-image: linear-gradient(rgba(24, 17, 17, 0.6) 0%, rgba(24, 17, 17, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYdpBmY3r1AV0RYKLnhXUeETuU2pbtb4-bsxEp_opbBfpwXe2ihCmEh53HpLV4LTkJ8MIAHCUMQpl9QA2dWlL7uuH_uX7De5KzPFQhe1sMZaTREEvmfao9iU7mKgA1Frv_ENfyuzLEjh17CYxJcb2a21W-HVzfIGTH2IFRjjiCBJHEGh83kieNr1D66golc8b687vnIQ1Qc5MybJvdsquCUKBx7QD8JfEkMetBvnIRQNXhZrNOeJwiMNJgiFkV3BEkRBUL8JmFNX0");'>
+<div class="flex flex-col gap-4 max-w-2xl">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                            Unleash Your Potential. Find Your Pride.
+                                        </h1>
+<h2 class="text-gray-200 dark:text-white/80 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                            Join a community of champions dedicated to pushing limits. Whether you're a beginner or a pro, we have a plan to help you achieve your fitness and combat sport goals.
+                                        </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">View Plans</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Pricing -->
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-0 pt-5 text-center">Choose Your Membership</h2>
+<!-- PricingCards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 py-3">
+<div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-gray-200 dark:border-[#392829] bg-white dark:bg-[#271c1c] p-6">
+<div class="flex flex-col gap-1">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Fighter's Foundation</h3>
+<p class="flex items-baseline gap-1 text-gray-900 dark:text-white">
+<span class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">$99</span>
+<span class="text-gray-900 dark:text-white text-base font-bold leading-tight">/ month</span>
+</p>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-[#392829] text-primary dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Choose Plan</span>
+</button>
+<div class="flex flex-col gap-3 pt-2">
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        24/7 Gym Access
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Unlimited Group Fitness Classes
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Access to MMA Fundamentals
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Locker Room Access
+                                    </div>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-lg border-2 border-solid border-primary bg-white dark:bg-[#271c1c] p-6 relative">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Champion's Circle</h3>
+<p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-full bg-primary px-3 py-1 text-center">Most Popular</p>
+</div>
+<p class="flex items-baseline gap-1 text-gray-900 dark:text-white">
+<span class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">$149</span>
+<span class="text-gray-900 dark:text-white text-base font-bold leading-tight">/ month</span>
+</p>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Choose Plan</span>
+</button>
+<div class="flex flex-col gap-3 pt-2">
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        All Fighter's Foundation benefits
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Unlimited Advanced MMA Classes
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Access to Sparring Sessions
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        1 Personal Training Session/Month
+                                    </div>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-gray-200 dark:border-[#392829] bg-white dark:bg-[#271c1c] p-6">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Annual Pride</h3>
+<p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-full bg-primary/70 dark:bg-primary/50 px-3 py-1 text-center">Best Value</p>
+</div>
+<p class="flex items-baseline gap-1 text-gray-900 dark:text-white">
+<span class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">$1500</span>
+<span class="text-gray-900 dark:text-white text-base font-bold leading-tight">/ year</span>
+</p>
+</div>
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-[#392829] text-primary dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Choose Plan</span>
+</button>
+<div class="flex flex-col gap-3 pt-2">
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        All Champion's Circle benefits
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        12 Months for the Price of 10
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Free Club T-Shirt
+                                    </div>
+<div class="text-[13px] font-normal leading-normal flex items-center gap-3 text-gray-700 dark:text-white/80">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                        Priority Class Booking
+                                    </div>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Testimonials -->
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-0 pt-5 text-center">Hear From Our Members</h2>
+<!-- Testimonials -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-3">
+<div class="flex flex-col gap-4 rounded-lg border border-solid border-gray-200 dark:border-[#392829] bg-white dark:bg-transparent p-6">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a female member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbEA06-RanmU1gbM1whTX21fNN_AZvw0Z_-w3Lg587rGKkn5Gc26EnVjlD3vOQ1belEFN9JD5bhwXXEMRVNv1ktF3YojGRRSFZ4WvKRbEkCCNq9cwkl0o13VKD_2T6cMI7CYNmSe_A-hxQdWHh9JAuaQbs8TotNFOp695VGIs4i5dCqOJZo4h1_9qKD5BniAFGroF8TaHc2tpJb5XwDqQG9xI8hveVPB2AC72qORTy8E1BqN1VKOaITEn_Bq8DFfspfDRt14H5VI"/>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Sarah J.</p>
+<p class="text-sm text-gray-600 dark:text-white/70">Champion's Circle Member</p>
+</div>
+</div>
+<p class="text-gray-700 dark:text-white/80">"Joining Pride MMA was the best decision I've ever made. The coaches are incredible, and the community is so supportive. I've never felt stronger or more confident!"</p>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-solid border-gray-200 dark:border-[#392829] bg-white dark:bg-transparent p-6">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a male member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt7HvwJpkAzkoOWhOST4QMQ5I-9NKyULbew7xQb5P20HwvGaXN7OjBsj-p01dn5whIWVJSE0zN3CpV_4SVC-5yfcOVnhJ1PPk4IvO2lBUCFVrxzCsm_2FJXTYMzcYpwN0fhCvT-WZM8zrtEiN32dignMiIvHy7mn_wdI0u5FQFqbIHaYFguUxXnrGIJcALcQxa0aGmzBTTVmkdFhRMQBoa0bAznG-DFWST66xPTXW3qbAABMVPPcomzF6WIR0PmrMhI07iH_X6LxI"/>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Mike R.</p>
+<p class="text-sm text-gray-600 dark:text-white/70">Fighter's Foundation Member</p>
+</div>
+</div>
+<p class="text-gray-700 dark:text-white/80">"As a beginner, I was nervous, but everyone at Pride made me feel welcome. The fundamentals class is perfect for learning the ropes and getting a killer workout."</p>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="flex flex-col items-center gap-4 py-8">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center">Frequently Asked Questions</h2>
+<div class="w-full max-w-2xl flex flex-col gap-3 px-4">
+<details class="group rounded-lg bg-white dark:bg-[#271c1c] p-4 border border-gray-200 dark:border-[#392829]">
+<summary class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-900 dark:text-white">
+                                        What are the gym's hours?
+                                        <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="group-open:mt-4 text-gray-700 dark:text-white/80">Our gym is accessible 24/7 for members. Staffed hours for sign-ups and assistance are from 8 AM to 8 PM on weekdays and 10 AM to 6 PM on weekends.</p>
+</details>
+<details class="group rounded-lg bg-white dark:bg-[#271c1c] p-4 border border-gray-200 dark:border-[#392829]">
+<summary class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-900 dark:text-white">
+                                        Can I try a class before signing up?
+                                        <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="group-open:mt-4 text-gray-700 dark:text-white/80">Absolutely! We offer a free trial class for all new visitors. You can book your trial class through our schedule page or by contacting us directly.</p>
+</details>
+<details class="group rounded-lg bg-white dark:bg-[#271c1c] p-4 border border-gray-200 dark:border-[#392829]">
+<summary class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-900 dark:text-white">
+                                        What is your cancellation policy?
+                                        <span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<p class="group-open:mt-4 text-gray-700 dark:text-white/80">We offer flexible membership options. Our monthly plans can be canceled with 30 days' notice. Annual memberships are non-refundable but offer the best value.</p>
+</details>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-solid border-white/10 dark:border-b-[#392829] mt-10 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 px-10">
+<p class="text-sm text-gray-600 dark:text-white/60">© 2024 Pride MMA &amp; Fitness. All Rights Reserved.</p>
+<div class="flex gap-4">
+<a class="text-gray-600 dark:text-white/60 hover:text-primary" href="#">Facebook</a>
+<a class="text-gray-600 dark:text-white/60 hover:text-primary" href="#">Instagram</a>
+<a class="text-gray-600 dark:text-white/60 hover:text-primary" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
